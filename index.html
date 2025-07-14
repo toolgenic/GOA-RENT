@@ -1,67 +1,140 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Goa Stay</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: white;
+    }
+    header {
+      background: url('https://source.unsplash.com/1600x600/?goa,beach,night') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3em;
+      color: #00ffff;
+      text-shadow: 0 0 20px #00ffff;
+      animation: slideIn 1s ease-out;
+    }
+    header button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #00ffff;
+      border: none;
+      color: #121212;
+      cursor: pointer;
+      font-size: 1em;
+      border-radius: 5px;
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 15px;
+    }
+    .card-content h3, .card-content p {
+      margin: 10px 0;
+    }
+    .stars {
+      color: #00ffff;
+    }
+    .book-btn {
+      display: inline-block;
+      padding: 10px 15px;
+      margin-top: 10px;
+      background-color: #00ffff;
+      color: #121212;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+    .book-btn:active {
+      transform: scale(0.95);
+    }
+    footer {
+      background-color: #1e1e1e;
+      text-align: center;
+      padding: 20px;
+    }
+    .socials a {
+      margin: 0 10px;
+      color: #00ffff;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="overlay">
-      <h1 class="hero-text">Explore Goa Stay</h1>
-      <button onclick="scrollToListings()">Browse Stays</button>
+  <header>
+    <h1>Explore Goa Stay</h1>
+    <button onclick="document.getElementById('listings').scrollIntoView({behavior: 'smooth'})">Browse Stays</button>
+  </header>  <section id="listings" class="section">
+    <h2>Top Stays</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/300x200/?goa,room" alt="1BHK near Baga Beach">
+        <div class="card-content">
+          <h3>1BHK near Baga Beach</h3>
+          <p>₹1800/night</p>
+          <p>Location: Baga, Goa</p>
+          <p class="stars">★★★★★</p>
+          <a href="https://wa.me/91XXXXXXXXXX" class="book-btn">Book Now</a>
+        </div>
+      </div>
     </div>
-  </header>
-
-  <section id="listings" class="listings">
-    <div class="card">
-      <img src="https://source.unsplash.com/400x300/?goa,beach,room" alt="Property">
-      <h2>1BHK near Baga Beach</h2>
-      <p>₹1800/night · Baga Beach</p>
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <a href="https://wa.me/91XXXXXXXXXX" class="book-btn">Book Now</a>
-    </div>
-    <!-- Duplicate .card divs for more listings -->
-  </section>
-
-  <section class="about">
+  </section>  <section class="section">
     <h2>About Goa Stay</h2>
-    <p>Find affordable, handpicked stays across Goa. Perfect for solo trips, couples, and families!</p>
-  </section>
-
-  <section class="testimonials">
+    <p>Goa Stay offers curated short-term stays across Goa. Comfortable, affordable, and near the beach!</p>
+  </section>  <section class="section">
     <h2>Testimonials</h2>
-    <div>
-      <p>“Amazing experience and great host!” – Rohan</p>
-      <p>“Clean rooms and best beach view.” – Priya</p>
-    </div>
-  </section>
-
-  <section class="contact">
+    <p>“Amazing experience in Baga!” – Priya</p>
+    <p>“Affordable and clean, loved it!” – Sameer</p>
+    <p>“Super easy to book on WhatsApp!” – Anjali</p>
+  </section>  <section class="section">
     <h2>Contact Us</h2>
-    <p>
-      <a href="https://instagram.com">Instagram</a> ·
-      <a href="https://wa.me/91XXXXXXXXXX">WhatsApp</a> ·
+    <div class="socials">
+      <a href="https://instagram.com">Instagram</a>
+      <a href="https://wa.me/91XXXXXXXXXX">WhatsApp</a>
       <a href="mailto:goastay@example.com">Gmail</a>
-    </p>
-  </section>
-
-  <footer>
-    <p>© 2025 Goa Stay</p>
-    <p>
-      <a href="#">Instagram</a> |
-      <a href="#">WhatsApp</a> |
-      <a href="#">Gmail</a>
-    </p>
+    </div>
+  </section>  <footer>
+    <p>© 2025 Goa Stay. All rights reserved.</p>
   </footer>
-
-  <!-- Optional Razorpay Booking -->
-  <div class="razorpay">
-    <button onclick="payNow()">Pay ₹500 Booking Fee</button>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
