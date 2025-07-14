@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Goa Stay</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay">
+      <h1 class="hero-text">Explore Goa Stay</h1>
+      <button onclick="scrollToListings()">Browse Stays</button>
+    </div>
+  </header>
+
+  <section id="listings" class="listings">
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?goa,beach,room" alt="Property">
+      <h2>1BHK near Baga Beach</h2>
+      <p>₹1800/night · Baga Beach</p>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <a href="https://wa.me/91XXXXXXXXXX" class="book-btn">Book Now</a>
+    </div>
+    <!-- Duplicate .card divs for more listings -->
+  </section>
+
+  <section class="about">
+    <h2>About Goa Stay</h2>
+    <p>Find affordable, handpicked stays across Goa. Perfect for solo trips, couples, and families!</p>
+  </section>
+
+  <section class="testimonials">
+    <h2>Testimonials</h2>
+    <div>
+      <p>“Amazing experience and great host!” – Rohan</p>
+      <p>“Clean rooms and best beach view.” – Priya</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>
+      <a href="https://instagram.com">Instagram</a> ·
+      <a href="https://wa.me/91XXXXXXXXXX">WhatsApp</a> ·
+      <a href="mailto:goastay@example.com">Gmail</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Goa Stay</p>
+    <p>
+      <a href="#">Instagram</a> |
+      <a href="#">WhatsApp</a> |
+      <a href="#">Gmail</a>
+    </p>
+  </footer>
+
+  <!-- Optional Razorpay Booking -->
+  <div class="razorpay">
+    <button onclick="payNow()">Pay ₹500 Booking Fee</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
