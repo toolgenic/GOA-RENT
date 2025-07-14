@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+.hero {
+  height: 100vh;
+  background: url('https://source.unsplash.com/1600x900/?goa,beach,night') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero-text {
+  font-size: 3rem;
+  animation: slideGlow 2s ease-in-out forwards;
+}
+
+@keyframes slideGlow {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+    text-shadow: none;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 0 10px #00ffff;
+  }
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #00ffff;
+  color: #121212;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.listings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 0 0 transparent;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #00ffff88;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.book-btn {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background: #00ffff;
+  color: #121212;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.book-btn:active {
+  transform: scale(0.95);
+}
+
+.about, .testimonials, .contact {
+  padding: 2rem;
+  background-color: #1a1a1a;
+}
+
+footer {
+  background-color: #101010;
+  text-align: center;
+  padding: 1rem;
+  position: sticky;
+  bottom: 0;
+}
+
+.razorpay {
+  padding: 2rem;
+  text-align: center;
+}
